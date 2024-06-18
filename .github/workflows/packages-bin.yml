@@ -134,6 +134,7 @@ jobs:
             PATH="/opt/homebrew/opt/postgresql@${PG_VERSION}/bin:$PATH"
             PSYCOPG_TEST_WANT_LIBPQ_BUILD=">= ${PG_VERSION}"
             PSYCOPG_TEST_WANT_LIBPQ_IMPORT=">= ${PG_VERSION}"
+            MACOSX_DEPLOYMENT_TARGET='10.9'
 
       - uses: actions/upload-artifact@v4
         with:
