@@ -14,7 +14,7 @@ case "$ID" in
     alpine)
         # tzdata is required for datetime tests.
         apk update
-        apk add --no-cache tzdata
+        apk add --no-cache tzdata openldap
         "${dir}/build_libpq.sh" > /dev/null
         ;;
 
