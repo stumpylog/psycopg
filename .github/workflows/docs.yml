@@ -1,10 +1,7 @@
 name: Build documentation
 
 on:
-  push:
-    branches:
-      # This should match the DOC3_BRANCH value in the psycopg-website Makefile
-      - master
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}

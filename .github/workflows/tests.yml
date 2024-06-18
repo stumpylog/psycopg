@@ -1,14 +1,7 @@
 name: Tests
 
 on:
-  push:
-    # This should disable running the workflow on tags, according to the
-    # on.<push|pull_request>.<branches|tags> GitHub Actions docs.
-    branches:
-      - "*"
-  pull_request:
-  schedule:
-    - cron: '48 6 * * *'
+  workflow_dispatch:
 
 concurrency:
   # Cancel older requests of the same workflow in the same branch.
